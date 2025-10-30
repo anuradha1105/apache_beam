@@ -1,11 +1,9 @@
 # Apache Beam Data Engineering Exercise
-
 A comprehensive demonstration of **Apache Beam** features for data engineering and stream processing, implemented in **Google Colab** using a dedicated virtual environment.
 
 ---
 
 ## 📋 Overview
-
 This project presents an end-to-end implementation of an Apache Beam data pipeline using synthetic e-commerce sales data.  
 It demonstrates how Beam’s unified batch and stream processing model can be used to perform transformations, filtering, partitioning, and time-based windowing — all within a single scalable pipeline.
 
@@ -14,7 +12,6 @@ The notebook serves as a practical exercise for learning and applying Beam conce
 ---
 
 ## 🎯 Features Demonstrated
-
 - **ParDo** – Parallel element processing using custom `DoFn` classes  
 - **Map** – Element-wise transformations and calculations  
 - **Filter** – Conditional record filtering  
@@ -38,22 +35,34 @@ apache_beam/
 
 ````
 ## 🚀 Environment & Versions
-
 This project was developed and executed in **Google Colab** with the following setup:
 
 | Component | Version / Tool |
 |:--|:--|
-| Python | **3.12.12** |
+| Python | **3.10** |
 | Apache Beam | **2.58.0** |
 | Virtual Environment | **virtualenv** |
 | Operating System | Ubuntu (Colab runtime) |
 | Notebook Interface | Jupyter / Colab |
-| Date of Execution | October 2025 |
 
 ---
 
-## 🧱 Implementation Summary
+**📊 Dataset**
+The notebook uses synthetic e-commerce sales data, representing transactional information across multiple stores and product categories.
 
+| Field       | Description                                               |
+| :---------- | :-------------------------------------------------------- |
+| `timestamp` | Transaction timestamp (for windowing examples)            |
+| `store`     | Unique store identifier (e.g., store-1, store-2, store-3) |
+| `product`   | Product name (e.g., apple, banana, milk)                  |
+| `category`  | Product category (e.g., Grocery, Electronics, Furniture)  |
+| `price`     | Unit price of the item                                    |
+| `quantity`  | Quantity sold                                             |
+| `amount`    | Derived metric (`price * quantity`)                       |
+
+----
+
+## 🧱 Implementation
 The notebook walks through each required Beam concept using a practical example of e-commerce sales data processing.
 
 | Section | Description |
@@ -73,7 +82,6 @@ Each code cell demonstrates the relevant Beam concept, executes independently, a
 ---
 
 ## 💡 Key Concepts
-
 - **PCollection:** Immutable distributed dataset that flows through the pipeline.  
 - **Transform:** Operation applied to a PCollection (e.g., Map, Filter, ParDo).  
 - **Pipeline:** Logical container for all transforms and data flow execution.  
@@ -83,7 +91,6 @@ Each code cell demonstrates the relevant Beam concept, executes independently, a
 ---
 
 ## 🎓 Learning Objectives
-
 By completing this exercise, you will learn:
 
 - How to design and execute Apache Beam pipelines in Python  
@@ -96,7 +103,6 @@ By completing this exercise, you will learn:
 ---
 
 ## 🧩 Example Snippets
-
 **Basic Beam Pipeline**
 
 ```python
@@ -131,7 +137,6 @@ pipeline | beam.WindowInto(window.FixedWindows(60))  # 60-second windows
 ---
 
 ## 🔗 Resources
-
 - [Apache Beam Official Documentation](https://beam.apache.org/documentation/)  
 - [Beam Python SDK](https://beam.apache.org/documentation/sdks/python/)  
 - [Interactive Beam Playground](https://beam.apache.org/get-started/try-beam-playground/)  
@@ -140,7 +145,6 @@ pipeline | beam.WindowInto(window.FixedWindows(60))  # 60-second windows
 ---
 
 ## 🎬 Video Walkthrough (Optional)
-
 Suggested video structure for presentation:
 
 1. **Introduction (1–2 min)** – Project overview, goals, and dataset  
@@ -151,9 +155,7 @@ Suggested video structure for presentation:
 ---
 
 ## 🤝 Contributing
-
 This project is part of an academic exercise. You are encouraged to experiment by:
-
 - Extending the dataset  
 - Modifying the transforms  
 - Exploring advanced windowing and triggers  
