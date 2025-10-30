@@ -39,7 +39,7 @@ This project was developed and executed in **Google Colab** with the following s
 
 | Component | Version / Tool |
 |:--|:--|
-| Python | **3.10** |
+| Python | **3.8 or greater** |
 | Apache Beam | **2.58.0** |
 | Virtual Environment | **virtualenv** |
 | Operating System | Ubuntu (Colab runtime) |
